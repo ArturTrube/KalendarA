@@ -39,6 +39,17 @@ public class KalendarA {
             else
                 System.out.println(ANSI_RED + "Неправильно. Попробуйте еще раз."+ ANSI_RESET);
         }
-        System.out.println("Завершение.");
-    }   
-}
+            if(correctAnswers == 5) {
+                System.out.println("Молодец ты хорошо знаешь таблицу умножения!");
+                }
+        else if(correctAnswers == 4) {
+            System.out.println("Тебе еще есть над чем работать");
+        }
+        else if(correctAnswers == 3) {
+            System.out.println("Тебе еще есть над чем работать");
+        }
+            else
+                System.out.println("Ты плохо знаешь таблицу умножения");
+            System.out.println("Завершение.");
+        }   
+    }
