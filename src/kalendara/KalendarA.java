@@ -13,7 +13,16 @@ import java.util.Scanner;
  * @author Arthur
  */
 public class KalendarA {
- public static void main(String[] args) {
+ public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static void main(String[] args) {
         int correctAnswers = 0;
         Random numGenerator = new Random();
         Scanner inputScanner = new Scanner(System.in);
@@ -24,11 +33,11 @@ public class KalendarA {
             System.out.print(nums[0]+" * "+nums[1]+" = ");
             int answer = inputScanner.nextInt();
             if(answer == nums[0]*nums[1]) {
-                System.out.println("Правильно.");
+                System.out.println(ANSI_GREEN + "Правильно."+ ANSI_RESET);
                 ++correctAnswers;
             }
             else
-                System.out.println("Неправильно. Попробуйте еще раз.");
+                System.out.println(ANSI_RED + "Неправильно. Попробуйте еще раз."+ ANSI_RESET);
         }
         System.out.println("Завершение.");
     }   
